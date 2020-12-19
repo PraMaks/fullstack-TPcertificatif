@@ -1,0 +1,7 @@
+.ng-invalid:not(form).ng-touched{
+    border: 1px solid red
+}
+
+input, textarea, select{
+    background-color:rgb(0, 238, 255);
+}

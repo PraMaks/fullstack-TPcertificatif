@@ -1,0 +1,13 @@
+{
+  "myApi": [
+    {
+      "titre": "Mona Lisa",
+      "nomDuPeintre": "Leonard de Vinci",
+      "techniqueUtilisee": "peintureAHuile",
+      "avoirUnCadre": true,
+      "livraisonType": "Rapide $10.00 (2 à 4 semaines)",
+      "detailsSupplementaires": "Rapidement stp",
+      "id": 1
+    }
+  ]
+}

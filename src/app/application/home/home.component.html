@@ -1,0 +1,108 @@
+<section class="p-sm-5 p-2">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center mb-3">
+        <h1 class="text-warning display-2">Bienvenue sur le site Web</h1>
+        <hr />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="text-center">
+        <div class="card bg-secondary text-white">
+          <div class="card-body text-center">
+            <h2>Ici vous pourriez trouver/apprendre:</h2>
+            <hr class="titre">
+            <h4 class="card-text">-Les bases <a class="text-warning" [routerLink]="['/tutoriels', 1]"> d'Angular</a>, <a class="text-warning" [routerLink]="['/tutoriels', 2]">de CRUD</a> et <a class="text-warning" [routerLink]="['/tutoriels', 3]">de relations entre objets en informatique.</a></h4>
+            <hr />
+            <h4 class="card-text">-Une démonstration de CRUD et de services en remplissant <a class="text-warning" routerLink="/formulaire">un formulaire.</a></h4>
+            <hr />
+            <h4 class="card-text">-<a class="text-warning" routerLink="/fun">Une "playlist"</a> de vidéos sur YouTube.</h4>
+            <hr />
+            <h4 class="card-text">-Une page de <a class="text-warning" routerLink="/contact">contact.</a></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Titre-->
+    <div class="row">
+      <div class="col text-center my-3">
+        <h2 class="text-warning display-2">Tutoriels disponibles</h2>
+        <hr />
+      </div>
+    </div>
+    <!-- Fin Titre-->
+
+    <div class="row">
+      <div class="col-lg-4 col-sm-10 mx-auto mb-4">
+        <div class="card bg-dark">
+          <img
+            src="./../../../assets/images/Angular_full_color_logo.png"
+            class="card-img-top"
+          />
+          <div class="card-body text-center">
+            <div class="card-title">
+              <h2 class="text-light">Mini Tutoriel sur Angular 10</h2>
+            </div>
+            <div class="card-subtitle">
+              <button
+                type="button"
+                class="btn btn-danger text-white"
+                [routerLink]="['/tutoriels', 1]"
+              >
+                <h4>Cliquer ici pour en savoir plus...</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-10 mx-auto mb-4">
+        <div class="card bg-dark">
+          <img
+            src="./../../../assets/images/Angular_full_color_logo.png"
+            class="card-img-top"
+          />
+          <div class="card-body text-center">
+            <div class="card-title">
+              <h2 class="text-light">Mini tutoriel sur CRUD</h2>
+            </div>
+            <div class="card-subtitle">
+              <button
+                type="button"
+                class="btn btn-danger text-white"
+                [routerLink]="['/tutoriels', 2]"
+              >
+                <h4>Cliquer ici pour en savoir plus...</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-10 mx-auto mb-4">
+        <div class="card bg-dark">
+          <img
+            src="./../../../assets/images/Angular_full_color_logo.png"
+            class="card-img-top"
+          />
+          <div class="card-body text-center">
+            <div class="card-title">
+              <h2 class="text-light">Mini tutoriel sur les relations</h2>
+            </div>
+            <div class="card-subtitle">
+              <button
+                type="button"
+                class="btn btn-danger text-white"
+                [routerLink]="['/tutoriels', 3]"
+              >
+                <h4>Cliquer ici pour en savoir plus...</h4>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+1. Composition de l'application
+
+-L'application utilise Angular, Bootstrap, JQuery et FontAwesome (version gratuite).
+
+npm i bootstrap --save
+npm i jquery --save 
+npm i @fortawesome/fontawesome-free --save
+
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
+-De plus, il est important d'installer json-server pour rouler le fichier data.json sur le port 3300 localement.
+
+npm i json-server
+
+-Des fichiers .css sont aussi utilisés pour certaines composantes et pour appliquer du style globalement.
+
+-L'application utilise le routeur Angular pour se déplacer sur le site Web.
+
+-L'application est composée de plusieurs composantes:
+
+    -Le component navbar c'est la barre de navigation qui s'affiche en haut de l'écran sur toutes les pages.
+
+    -Le component footer c'est le footer qui s'affiche en bas de l'écran sur toutes les pages.
+
+    -Le component home c'est la page d'accueil du site. À partir d'elle, l'utilisateur peut explorer les différentes parties du site.
+
+    -Le component error404 est utilisée uniquement lorsque l'utilisateur rentre un url incorrect du site, cette page offre la possibilié de revenir sur la page Home.
+
+    -Le component tutoriels est un composant qui est utilisé pour afficher l'une des trois pages de tutoriels. Le contenu de la page est déterminé à partir d'un ID (1,2,3).
+
+    -Le component formulaire est composé de 5 fichiers (1 .html, 1 .css , .ts, .spec.ts et aussi d'un fichier .ts pour les services utilisées par ce composant). Le composant affiche
+     un formulaire à l'utilisateur qui lui permet de faire une commande d'une réplique d'oeuvre d'arts. Les données rentrées par l'utilisateur seront pris par le service qui envoie ces
+     données dans le data.json du serveur json.
+
+    IMPORTANT: Le service formulaire.service.ts hérite du service generic.service.ts qui se trouve dans le dossier /services/ du composant crud.
+
+    -Le component crud est un composant qui affiche toutes les données qui se trouvent présentement sur la page sous forme d'un tableau à partir du fichier data.json qui roule en background.
+    Deplus, il permet la suppression d'une donnée à partir de son id avec le bouton DELETE en utilisant la méthode delete() dans son fichier .ts.
+
+    -Le component read se trouve dans le repertoire du crud parce qu'il fait partie du crud et affiche une page identique à celle du formulaire, mais qui ne peut pas être modifié, car son but
+     est juste d'être affiché à l'écran de l'utilisateur et son url est différent à celui du formulaire. Il obtient les données de la même façon que le crud pour afficher son tableau.
+
+    -Le component update se dans le repertoire du crud pour les mêmes raisons que read, mais cette fois-ci, il affiche une page identique à celle du formulaire, mais qui peut être modifié.
+     Une fois soumis le formulaire utilise la méthode updateArtWork() pour la mettre à jour. Le url est différentde celui du formulaire (composant).
+
+    -Le component contact contient le formulaire pour contacter. 
+
+    -Le dossier models se trouve dans le repertoire crud et contient artWork.ts, l'objet utilisé pour stoquer les demandes de l'utilisateur sur les réplique des oeuvres d'arts.
+
+    -Dans le dossier assets se trouvent tous les images nécessaires pour les afficher sur le site.
+    
+     
+

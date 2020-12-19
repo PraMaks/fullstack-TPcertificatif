@@ -1,0 +1,601 @@
+<!--<h2>L'id recupere est : {{tutorielLinkId}}</h2>-->
+<!--
+<ng-container *ngIf="tutorielLinkId == 1; then tutoAngular; else tutoCrud">
+
+</ng-container>
+
+<ng-template #tutoAngular>    
+        <div>
+            <h1>Mini tutoriel Angular 10</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit quam totam perferendis laboriosam. Doloribus repudiandae excepturi commodi, quisquam architecto, vitae non minima quae debitis sunt quo est earum tempora, repellat magni rerum. Mollitia asperiores aliquam impedit, quae hic at magnam?</p>
+        </div>
+</ng-template>
+
+<ng-template #tutoCrud>
+    <ng-container *ngIf="tutorielLinkId == 2; then tutoCrud; else tutoCrud">
+
+    </ng-container>
+</ng-template>-->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <ng-container [ngSwitch]="tutorielLinkId">
+        <ng-container *ngSwitchCase="1">
+          <div class="bg-info mt-3 py-2">
+            <h1 class="text-center text-white">Mini Tutoriel sur Angular 10</h1>
+          </div>
+          <hr class="style-deux" />
+
+          <div class="row">
+            <!-- C'est quoi Angular 10? -->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/Angular_full_color_logo.png"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">1) C'est quoi Angular 10?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/Angular_full_color_logo.png"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">1) C'est quoi Angular 10?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Angular 10 est un framework créé par Google qui
+                          utilise le langage TypeScript.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ça sert à quoi? -->
+            <div class="col-xs-12 col-sm-12 col-md-6 mb-5">
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/question1.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">2) Ça sert à quoi?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/question1.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">2) Ça sert à quoi?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Angular permet la création des Single Page
+                          Applications (SPA) avec des modules et des composants.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="style-deux" />
+
+          <div class="row">
+            <!-- C'est quoi une Single Page Application? -->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/Angular_full_color_logo.png"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">
+                          3) C'est quoi une Single Page Application?
+                        </h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/Angular_full_color_logo.png"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">
+                          3) C'est quoi une Single Page Application?
+                        </h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Une SPA est une application web évite le chargement
+                          d'une nouvelle page à chaque fois que le client fait
+                          une demande.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 mb-5">
+              <!-- Pourquoi une SPA est plus performante? -->
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/question1.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">
+                          4) Pourquoi une SPA est plus performante?
+                        </h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/question1.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">
+                          4) Pourquoi une SPA est plus performante?
+                        </h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Une SPA charge sa page sur le navigateur Web du client
+                          et sur le serveur. Cependant, elle se charge qu'une
+                          seule fois, puisque c'est le contenu de la page qui se
+                          change et non la page ce qui évite de charger une
+                          nouvelle page.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="style-deux" />
+
+          <div class="card text-center">
+            <div class="card-header text-white bg-info">
+              <h2>Quelques notions importantes sur Angular</h2>
+            </div>
+            <div class="card-body bg-secondary text-white">
+              <p>
+                1) Le fichier angular.json: C'est le fichier de configuration
+                dans lequel qu'il est possible d'importer des styles, des assets
+                et des configurations.
+              </p>
+              <hr class="style-trois" />
+              <p>
+                2) Le fichier package.json: C'est un fichier qui contient des
+                packages de l'applications. En d'autres mots, il est possible de
+                changer ce que les commandes npm font dans la partie scripts et
+                de changer la version des dependances.
+              </p>
+              <hr class="style-trois" />
+              <p>
+                3) Selectors: C'est le nom qu'un composant Angular porte. Cela
+                permet de plus facilement aller le chercher lors de al
+                programmation.
+              </p>
+              <hr class="style-trois" />
+              <p>
+                4) Composant: C'est une partie de l'application qui
+                affiche/contrôle une partie de la page. Ce dernier se fait
+                genérer avec un fichier .html, .css et deux fichiers .ts.
+              </p>
+              <hr class="style-trois" />
+              <p>
+                5) Interpollation et "Banane": Deux paires d'accolades et une
+                paire de parenthèses carrés avec une paire d'accolades(dans les
+                parenthèses carrées)
+              </p>
+              <hr class="style-trois" />
+            </div>
+          </div>
+
+          <hr class="style-deux" />
+
+          <div class="card text-center">
+            <div class="card-header text-white bg-danger">
+              <h2>Quelques notions importantes sur TypeScript(TS)</h2>
+            </div>
+            <div class="card-body bg-secondary text-white">
+              <p>
+                1) TS est un sur-ensemble de JavaScript (le code JavaScript
+                correct peut être utilisé avec TypeScript)
+              </p>
+              <hr class="style-quatre" />
+              <p>
+                2) TS est un language compilé et lorsque c'est fait, il génère
+                des fichiers JS
+              </p>
+              <hr class="style-quatre" />
+              <p>3) La synthaxe du TS ressemble beaucoup à celle de Java.</p>
+              <hr class="style-quatre" />
+              <p>4) Le code TS est plus facile à lire et propre que JS.</p>
+              <hr class="style-quatre" />
+            </div>
+          </div>
+          <hr class="style-deux" />
+
+          <button type="button" class="btn btn-success btn-lg btn-block text-white" [routerLink]="['/contact']"><h4>Vous avez des questions? Contactez-moi!</h4></button>
+          <hr class="style-deux" />
+        </ng-container>
+
+        <ng-container *ngSwitchCase="2">
+          <div class="bg-info mt-3 py-2">
+            <h1 class="text-center text-white">Mini Tutoriel sur CRUD</h1>
+          </div>
+          <hr class="style-deux" />
+
+          <div class="card text-center">
+            <div class="card-header text-white bg-info">
+              <h2>C'est quoi CRUD?</h2>
+            </div>
+            <div class="card-body bg-secondary text-white">
+              <p>C'est un acronyme en informatique qui designe 4 actions:</p>
+              <hr class="style-trois" />
+              <p>-Créer (C: Create)</p>
+              <hr class="style-trois" />
+              <p>-Lire (R: Read)</p>
+              <hr class="style-trois" />
+              <p>-Mettre à jour (U: Update)</p>
+              <hr class="style-trois" />
+              <p>-Supprimer (D: Delete)</p>
+              <hr class="style-trois" />
+            </div>
+          </div>
+
+          <hr class="style-deux" />
+
+          <div class="row">
+            <!-- CREATE -->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/create.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">1) Create?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/create.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">1) Create?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Action de créer/ajouter des données dans une base de
+                          données.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- READ -->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/read.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">2) Read?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/read.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">2) Read?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Action d'afficher/avoir accès à une donnée spécifique
+                          dans une base de données.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="style-deux" />
+
+          <div class="row">
+            <!-- UPDATE -->
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/update.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">3) Update?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/update.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">3) Update?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Action de mettre à jour/changer une donnée dans une
+                          base de données.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6">
+              <!-- DELETE -->
+              <div class="image-flip">
+                <div class="mainflip flip-0">
+                  <div class="frontside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/delete.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">4) Delete?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Survolez cette carte pour en savoir plus...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="backside">
+                    <div class="card bg-secondary text-white">
+                      <div class="card-body text-center">
+                        <p>
+                          <img
+                            class="img-fluid"
+                            src="./../../../assets/images/delete.jpg"
+                            alt="logo Angular"
+                          />
+                        </p>
+                        <h4 class="card-title">4) Delete?</h4>
+                        <hr class="style-un" />
+                        <p class="card-text">
+                          Action de supprimer une donnée dans une base de
+                          données.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="style-deux" />
+
+          <button type="button" class="btn btn-success btn-lg btn-block text-white" [routerLink]="['/contact']"><h4>Vous avez des questions? Contactez-moi!</h4></button>
+          <hr class="style-deux" />
+        </ng-container>
+
+        <ng-container *ngSwitchCase="3">
+          <div>
+            <div class="bg-info mt-3 py-2">
+              <h1 class="text-center text-white">
+                Mini Tutoriel sur les relations
+              </h1>
+            </div>
+
+            <hr class="style-deux" />
+
+            <div class="card text-center">
+              <div class="card-header text-white bg-warning">
+                <h2>C'est quoi des relations en informatique?</h2>
+              </div>
+              <div class="card-body bg-secondary text-white">
+                <p>
+                  En programmation Orientée-Objet, il est nécessaire pour que
+                  les objets puissent se communiquer pour faire fonctionner les
+                  applications. Généralement, elles sont répresentées avec des
+                  diagrammes UML comme celui en dessous...
+                </p>
+                <hr class="style-trois" />
+              </div>
+              <div class="card-footer bg-white">
+                <img
+                  class="diagramme"
+                  src="./../../../assets/images/diagramme.png"
+                  alt="diagramme"
+                />
+              </div>
+            </div>
+
+            <hr class="style-deux" />
+
+            <div class="card text-center">
+              <div class="card-header text-white bg-danger">
+                <h2>
+                  Il existe plusieurs relations différentes en Programmation
+                  Orientée-Objet
+                </h2>
+              </div>
+              <div class="card-body bg-secondary text-white">
+                <p>
+                  1) Association: Relation entre 2 objets qui ont un lien. Elle
+                  peut être one to one, one to many ou many to many.
+                </p>
+                <hr class="style-quatre" />
+                <p>
+                  2) Héritage: Relation parent-enfant entre 2 objets dans
+                  laquelle l'enfant hérite des caractéristiques du parent.
+                </p>
+                <hr class="style-quatre" />
+                <p>
+                  3) Aggregation: Relation entre 2 objets dans laquelle l'un est
+                  un attribut de l'autre et il n'y a pas besoin de l'instancier
+                  dans tout constructeur de l'objet qui l'a comme un attribut.
+                </p>
+                <hr class="style-quatre" />
+                <p>
+                  4) Composition: Relation entre 2 objets dans laquelle l'un est
+                  un attribut de l'autre, mais qui doit être instancié dans tout
+                  constructeur de l'objet qui l'a comme un attribut.
+                </p>
+                <hr class="style-quatre" />
+                <p>
+                  5) Implémentation: Relation entre 2 objets dans laquelle l'un
+                  des objets est une interface de l'autre.
+                </p>
+                <hr class="style-quatre" />
+              </div>
+            </div>
+            <hr class="style-deux" />
+            <button type="button" class="btn btn-success btn-lg btn-block text-white" [routerLink]="['/contact']"><h4>Vous avez des questions? Contactez-moi!</h4></button>
+          <hr class="style-deux" />
+          </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+          <div>
+            <a [routerLink]="['/error']">Erreur</a>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

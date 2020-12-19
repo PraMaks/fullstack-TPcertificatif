@@ -1,0 +1,136 @@
+<div class="container bg-info rounded text-white">
+  <h2 class="pt-3 mt-3">
+    Formulaire pour commander une réplique d'un oeuvre d'art
+  </h2>
+  <form
+    class="pb-3"
+    [formGroup]="userForm"
+    (ngSubmit)="onSubmit()"
+    ngNativeValidate
+  >
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info">{{ validMessage }}</h3>
+    </div>
+
+    <div class="form-group">
+      <label for="titre"><h4>Titre de l'oeuvre d'art</h4></label>
+      <input id="titre" formControlName="titre" class="form-control" />
+
+      <div
+        *ngIf="!form.titre.valid && (form.titre.dirty || form.titre.touched)"
+      >
+        <div [hidden]="!form.titre.errors.required">
+          Le titre est obligatoire
+        </div>
+        <div [hidden]="!form.titre.errors.minlength">Minimum 8 caracteres</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nomDuPeintre"><h4>Nom du peintre</h4></label>
+      <input
+        id="nomDuPeintre"
+        formControlName="nomDuPeintre"
+        class="form-control"
+      />
+
+      <div
+        *ngIf="
+          !form.nomDuPeintre.valid &&
+          (form.nomDuPeintre.dirty || form.nomDuPeintre.touched)
+        "
+      >
+        <div [hidden]="!form.nomDuPeintre.errors.required">
+          Le nom du peintre est obligatoire
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <h4>
+      Veuillez selectionner la technique qui sera utilisée afin de reproduire
+      l'oeuvre
+    </h4>
+    <div class="form-group">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="techniqueUtilisee"
+          id="peintureAHuile"
+          value="peintureAHuile"
+          checked
+        />
+        <label class="form-check-label" for="peintureAHuile">
+          Peinture à l'huile
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="techniqueUtilisee"
+          id="crayonPlomb"
+          value="crayonPlomb"
+        />
+        <label class="form-check-label" for="crayonPlomb">
+          Crayon à mine de plomb
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          formControlName="techniqueUtilisee"
+          id="Gouache"
+          value="Gouache"
+        />
+        <label class="form-check-label" for="Gouache"> Gouache </label>
+      </div>
+    </div>
+
+    <div class="form-check form-group">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        id="avoirUnCadre"
+        formControlName="avoirUnCadre"
+      />
+      <label class="form-check-label" for="avoirUnCadre">
+        <h6>Voulez-vous un cadre avec la commande? (Cochez pour oui)</h6>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="livraisonType"
+        ><h4>Sélectionner le mode de livraison</h4></label
+      >
+      <select
+        class="form-control"
+        id="livraisonType"
+        formControlName="livraisonType"
+      >
+        <option>Gratuite (1 à 2 mois)</option>
+        <option>Rapide $10.00 (2 à 4 semaines)</option>
+        <option>Premium $20.00 (1 semaine)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="detailsSupplementaires">
+        <h4>Notes ou details supplémentaires sur la commande?</h4></label
+      >
+      <textarea
+        id="detailsSupplementaires"
+        formControlName="detailsSupplementaires"
+        class="form-control"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <button class="btn btn-primary btn-lg btn-block">Envoyer</button>
+    <a [routerLink]="['/crud']" class="btn btn-secondary btn-lg btn-block">Crud</a>
+  </form>
+</div>
+<hr />
